@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Etudiants{% endblock %}
+
+{% block body %}
+    <h1>Etudiant</h1>
+    <p>Prénom : {{ etudiant.prenom }}</p>
+    <p>Nom : {{ etudiant.nom }}</p>
+    <p>Email : {{ etudiant.email }}</p>
+    <p>Né(e) le : {{ etudiant.dateNaissance | date('d/m/Y') }}</p>
+    <p>Age : {{ etudiant.age }}</p>
+{% endblock %}
