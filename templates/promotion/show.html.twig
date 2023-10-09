@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Promotions{% endblock %}
+
+{% block body %}
+    <h1>Promotion</h1>
+
+<p>Nom : {{ promotion.nom }}</p>
+<p>Année : {{ promotion.annee }}</p>
+<p>Nombre étudiants : {{ promotion.etudiants | length }}</p>
+
+<h2>Etudiants</h2>
+<ul>
+    {% for etudiant in promotion.etudiants | sort((a,b) => a.nom <=> b.nom) %}
+        <li>{{ etudiant.nom }} {{ etudiant.prenom }}</li>
+    {% endfor %}
+{% endblock %}

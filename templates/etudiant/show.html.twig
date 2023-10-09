@@ -9,4 +9,5 @@
     <p>Email : {{ etudiant.email }}</p>
     <p>Né(e) le : {{ etudiant.dateNaissance | date('d/m/Y') }}</p>
     <p>Age : {{ etudiant.age }}</p>
+    <p>Promotion : {{  etudiant.promotion.nom }} - {{ etudiant.promotion.annee }}</p>
 {% endblock %}
